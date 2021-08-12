@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta content="telephone=yes" name="format-detection">
+  <meta name="keyword" content="各地出行防疫政策指南">
+  <meta name="description" content="各地出行防疫政策指南查询">
+  <title>各地出行防疫政策查询</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="style.css?v=2.3">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c222a05e965a074b1e497d3178c74667";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
+    function setRootPixel() { var defaultFontSize = 0; function getDefaultFontSize() { if (defaultFontSize) { return defaultFontSize; } document.documentElement.style.fontSize = ''; var temp = document.createElement('div'); temp.style.cssText = 'width:1rem;display:none'; document.head.appendChild(temp); defaultFontSize = +window.getComputedStyle(temp, null).getPropertyValue('width').replace('px', '') || 16; document.head.removeChild(temp); return defaultFontSize; } function getQuery(name) { return (new RegExp('[?&]' + name + '=([^&#\\b]+)').exec(location.search || '') || [])[1]; } function setRootFontSize() { var widthQueryKey = ''; var rem2px = 50; var clientWidth; if (widthQueryKey && (+getQuery(widthQueryKey))) { clientWidth = +getQuery(widthQueryKey); } else { clientWidth = window.innerWidth && document.documentElement.clientWidth ? Math.min(window.innerWidth, document.documentElement.clientWidth) : (window.innerWidth || document.documentElement.clientWidth || (document.body && document.body.clientWidth) || 375); var supportLandscape = false; if (supportLandscape) { var isLandscape = ((screen.orientation && screen.orientation.angle) || window.orientation) / 90 % 2; if (isLandscape) { var clientHeight = window.innerHeight && document.documentElement.clientHeight ? Math.min(window.innerHeight, document.documentElement.clientHeight) : (window.innerHeight || document.documentElement.clientHeight || (document.body && document.body.clientHeight) || 375); clientWidth = Math.max(clientHeight, 350); } } } var htmlFontSizePx = clientWidth / 375 * rem2px; htmlFontSizePx = Math.min(htmlFontSizePx, 64); window.ROOT_FONT_SIZE = htmlFontSizePx; document.documentElement.style.fontSize = (htmlFontSizePx / getDefaultFontSize() * 100) + '%'; } function adjust(immediate) { if (immediate) { setRootFontSize(); return; } setTimeout(setRootFontSize, 30); } if (window.isResponsive === false) { document.documentElement.style.fontSize = '50px'; return; } adjust(true); window.addEventListener('resize', adjust, false); if ('onorientationchange' in window) { window.addEventListener('orientationchange', adjust, false); } } typeof window !== 'undefined' && setRootPixel(); 
+  </script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="top-ban">
+    <div class="logo-wrap">
+      <a class="logo-a three-a" href="javascript:;">
+        <img src="" alt="">
+      </a>
+      <a class="logo-a juhelogo" href="javascript:;">
+        <img src="" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="epidemic-main">
+    <div class="notices">
+      <a class="news" href="javascript:void(0);">
+        <div class="news-content">
+          <p class="news1">出行请提前了解当地防控要求并做好个人防护。</p>
+          <p class="news2">出行请提前了解当地防控要求并做好个人防护。</p>
+        </div>
+      </a>
+    </div>
+    <ul class="tabul">
+      <li class="active">出行政策</li>
+      <li>风险地区</li>
+      <li>核酸检测机构</li>
+    </ul>
+    <div class="tab-wrap">
+      <div class="tab-content" style="display: block;">
+        <div class="city-select">
+          <div class="city-input" id="fromCity">
+            <div class="fromVal city-color">出发地</div>
+            <span></span>
+          </div>
+          <div class="changeCity"></div>
+          <div class="city-input" id="toCity">
+            <div class="toVal city-color">目的地</div>
+            <span></span>
+          </div>
+        </div>
+        <div class="content-main">
+          <div class="outin-wrap" id="outFrom"></div>
+          <div class="outin-wrap" id="inFrom"></div>
+          <div class="outin-wrap" id="inTo"></div>
+          <div class="outin-wrap" id="outTo"></div>
+        </div>
+        <div class="desc-footer">以上政策整理自当地政府等公开发布的信息，如有更新或错漏，请以最新政策为准，建议在出行前咨询当地防疫部门、机场、火车站等</div>
+        <div class="city-code">
+          <p>请准备好进出凭证</p>
+          <div id="fromCode"></div>
+          <div id="toCode"></div>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div class="city-content">
+          <div class="top-section city-box">
+          </div>
+          <div class="high-content list-dl"></div>
+          <div class="middle-content list-dl"></div>
+        </div>
+      </div>
+      <div class="tab-content">
+        <div id="city-search">
+          <div class="city-title">&nbsp;</div>
+          <input class="search" type="search" placeholder="输入地址或医院名称筛选">
+        </div>
+        <div id="institution">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-right" style="line-height: 1.3;">
+    以上政策仅供参考，可能存在更新迟延或错误，请以相关部门最新官方通知为准。
+  </div>
+  <div class="loading">
+    <div class="loading-icon"></div>
+    <p class="loading-text">加载中...</p>
+  </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="weui.min.js"></script>
+<script src="jssdk.js?v=1.1"></script>
+<script src="cityData.js"></script>
+<script src="cityId.js"></script>
+<script src="topList.js"></script>
+<script src="epidemic.js?v=2.4"></script>
+<script src="hsjc.js?v=1.3"></script>
+<script src="risk.js?v=1.1"></script>
+</body>
+</html>
