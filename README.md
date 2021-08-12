@@ -37,4 +37,4 @@ var fromCity = document.getElementById('fromCity'),
 ```
 
 H5效果图：
-![image](https://github.com/JUHEAPI/chuxing2021/blob/master/img/sample.png)
+![image](https://raw.githubusercontent.com/JUHEAPI/chuxing2021/main/img/sample.png)
